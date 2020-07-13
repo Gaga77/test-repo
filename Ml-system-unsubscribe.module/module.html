@@ -3,7 +3,7 @@
 <!------------------------------------------->
 {# Tables of languages to match with browser language #}
 {% set countryCodes = {
-	'en': 'EN',
+
 	'en-au': 'EN',
 	'en-ca': 'EN',
 	'en-hk': 'EN',
@@ -135,7 +135,7 @@ Cette langue n'a pas été configuré (vérifier vos groupes de langues) si vous
 {# a - Cathing url_slug in url #}
 {% set tab_path_url = request.path|split('/', 4)|last %}
 {% set tab_lang = tab_path_url|split('/', 4) %}
-{% set url_slug =  tab_lang[0] %} 
+{% set url_slug =  tab_lang[0] %}
 {# b - SORT countryCodes by url_slug to extract the value corresponding to the match between url_slug and countryCodes value #}
 {% set matchedCountrySlug = countryCodes[url_slug] %}
 {% set url_lang = matchedCountrySlug %}
@@ -146,13 +146,13 @@ Cette langue n'a pas été configuré (vérifier vos groupes de langues) si vous
 {% set url_lang = tab[0]%}
 {% endif %}
 {# d - creating {{ fieldsByUrlLang }} -> contains every fields (name + value) from module which match with url_lang #}
-{% set fieldsByUrlLang = module[url_lang|trim] %} 
+{% set fieldsByUrlLang = module[url_lang|trim] %}
 {# fieldsByUrlLang #}
 {# e - SORT module by url_lang (if there is no match EN sorting will be apply) #}
 {% if !fieldsByUrlLang %}
 {% set module = module["EN"] %}
 {% else %}
-{% set module = module[url_lang|trim] %} 
+{% set module = module[url_lang|trim] %}
 {% endif %}
 {% else %}
 
@@ -188,15 +188,14 @@ Cette langue n'a pas été configuré (vérifier vos groupes de langues) si vous
 <div class="error-outer-container">
   <div class="d-flex flex-column align-items-center justify-content-center">
 
-	{% email_simple_subscription 
-    "email_simple_subscription" 
-    header="{{ module.header }}", 
-    input_help_text="{{ module.input_help_text }}", 
-    input_placeholder="{{ module.input_placeholder }}", 
-    button_text="{{ module.button_text }}", 
-    label="Backup Unsubscribe" 
+	{% email_simple_subscription
+    "email_simple_subscription"
+    header="{{ module.header }}",
+    input_help_text="{{ module.input_help_text }}",
+    input_placeholder="{{ module.input_placeholder }}",
+    button_text="{{ module.button_text }}",
+    label="Backup Unsubscribe"
 %}
 
   </div>
 </div>
-
