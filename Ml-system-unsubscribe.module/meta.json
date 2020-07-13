@@ -1,0 +1,15 @@
+{
+  "content_tags" : [ {
+    "name" : "COMMUNICATIONS",
+    "source" : "MARKETPLACE"
+  }, {
+    "name" : "COMPATIBLE_EMAIL",
+    "source" : "MARKETPLACE"
+  } ],
+  "extra_classes" : "widget-type-email_subscriptions",
+  "global" : false,
+  "smart_type" : "NOT_SMART",
+  "host_template_types" : [ "PAGE", "EMAIL" ],
+  "module_id" : 30809372896,
+  "is_available_for_new_content" : true
+}

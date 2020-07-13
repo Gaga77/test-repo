@@ -1,0 +1,203 @@
+<!------------------------------------------->
+<!-- A - PRELIMINARIES, TABS, COMPARING -->
+<!------------------------------------------->
+{# Tables of languages to match with browser language #}
+{% set countryCodes = {
+	'en': 'EN',
+	'en-au': 'EN',
+	'en-ca': 'EN',
+	'en-hk': 'EN',
+	'en-in': 'EN',
+	'en-ie': 'EN',
+	'en-my': 'EN',
+	'en-mt': 'EN',
+	'en-nz': 'EN',
+	'en-ph': 'EN',
+	'en-sg': 'EN',
+	'en-za': 'EN',
+	'en-gb': 'EN',
+	'en-us': 'EN',
+	'en-zw': 'EN',
+	'es': 'ES',
+	'es-ar': 'ES_MX',
+	'es-bo': 'ES_MX',
+	'es-cl': 'ES_MX',
+	'es-co': 'ES_MX',
+	'es-cr': 'ES_MX',
+	'es-cu': 'ES_MX',
+	'es-do': 'ES_MX',
+	'es-ec': 'ES_MX',
+	'es-sv': 'ES_MX',
+	'es-gt': 'ES_MX',
+	'es-hn': 'ES_MX',
+	'es-ni': 'ES_MX',
+	'es-pa': 'ES_MX',
+	'es-py': 'ES_MX',
+	'es-pe': 'ES_MX',
+	'es-pr': 'ES_MX',
+	'es-es': 'ES_MX',
+	'es-us': 'ES_MX',
+	'es-uy': 'ES_MX',
+	'es-ve': 'ES_MX',
+	'es-mx': 'ES_MX',
+	'fr': 'FR',
+	'fr-be': 'FR',
+	'fr-ca': 'FR',
+	'fr-fr': 'FR',
+	'fr-lu': 'FR',
+	'fr-mc': 'FR',
+	'fr-ch': 'FR',
+	'de': 'DE',
+	'de-at': 'DE',
+	'de-de': 'DE',
+	'de-gr': 'DE',
+	'de-li': 'DE',
+	'de-lu': 'DE',
+	'de-ch': 'DE',
+	'ja': 'JP',
+	'ja-jp': 'JP',
+	'zh': 'ZH',
+	'zh-cn': 'ZH',
+	'zh-hk': 'ZH_HK',
+	'zh-mo': 'ZH',
+	'zh-sg': 'ZH',
+	'zh-tw': 'ZH',
+	'zh-chs': 'ZH',
+	'zh-cht': 'ZH',
+	'cs': 'CS',
+	  'cs-cz': 'CS',
+	'da': 'DA',
+	  'da-dk': 'DA',
+	'nl': 'NL',
+	'nl-be': 'NL',
+	'nl-nl': 'NL',
+	'fi': 'FI',
+	  'fi-fi': 'FI',
+	'el': 'EL',
+	'el-cy': 'EL',
+	'el-gr': 'EL',
+	'it': 'IT',
+	'it-it': 'IT',
+	'it-ch': 'IT',
+	'no': 'NO',
+	'nb': 'NO',
+	'no-no': 'NO',
+	'pl': 'PL',
+	  'pl-pl': 'PL',
+	'pt': 'PT',
+	'pt-br': 'PT',
+	'pt-pt': 'PT',
+	'sv-fi': 'SV',
+	  'sv-se': 'SV'
+  } %}
+
+{# ******* before starting make sure all your languages groups are matching values from countryCodes (uppercase) ********* #}
+{# ******* before starting make sure you have one language group EN (for default) ********* #}
+
+{# condition for testing page type and set variables according to that / 4 cases : isPreviewPage-isWebsitePage-isSystemPage-isBlog #}
+{# Further inside code you'll see that this type page will determine by what rules content must be translated #}
+{% if request.path is containing '/_hcms/preview/template/' %}
+{% set isPreviewPage = true %}
+{% elif (content.contentTypeCategory == "SITE_PAGE" || content.contentTypeCategory == "LANDING_PAGE") && content_id > 0 %}
+{% set isWebsitePage = true %}
+{% elif content.contentTypeCategory == "SITE_PAGE" && content_id == 0 %}
+{% set isSystemPage = true %}
+{% else %}
+{% set isBlog = true %}
+{% endif %}
+
+{# ************************ #}
+{# ***** PREVIEW_LANG ***** #}
+{# usefull for preview only #}
+{# *********************** #}
+
+{% if isPreviewPage %}
+{# a - capture language from the select choice preview_language_selector #}
+{% set preview_lang = module.preview_language_selector|upper %}
+{# b - creating {{ fieldsByPreviewChoice }} -> contains every fields (name + value) from module which match with preview_langauge_selector value #}
+{% set fieldsByPreviewChoice = module[preview_lang] %}
+{# {{ fieldsByPreviewChoice }}#}
+{% if !fieldsByPreviewChoice %}
+Cette langue n'a pas été configuré (vérifier vos groupes de langues) si vous laissez tel quelle le contenu sera par defaut en anglais sur les pages lives.
+{% else %}
+{# c - SORT module by preview_lang #}
+{% set module = module[preview_lang] %}
+{% endif %}
+{#  This page is a preview and follows preview_language_selector rules : preview_lang = {{ preview_lang }}<br><br>#}
+{#  fields by preview_lang = {{ fieldsByPreviewChoice  }}<br> <br>#}
+{% endif %}
+
+{# ******************************************** #}
+{# *************** URL_LANG ******************* #}
+{# usefull for system pages which have url_lang #}
+{# ******************************************** #}
+{% if isSystemPage %}
+{# a - Cathing url_slug in url #}
+{% set tab_path_url = request.path|split('/', 4)|last %}
+{% set tab_lang = tab_path_url|split('/', 4) %}
+{% set url_slug =  tab_lang[0] %} 
+{# b - SORT countryCodes by url_slug to extract the value corresponding to the match between url_slug and countryCodes value #}
+{% set matchedCountrySlug = countryCodes[url_slug] %}
+{% set url_lang = matchedCountrySlug %}
+{# c - testing if there is match between url_lang and a countryCodes value #}
+{% if url_lang %}
+{% if url_lang is containing "_" %}
+{% set tab = url_lang|split('_') %}
+{% set url_lang = tab[0]%}
+{% endif %}
+{# d - creating {{ fieldsByUrlLang }} -> contains every fields (name + value) from module which match with url_lang #}
+{% set fieldsByUrlLang = module[url_lang|trim] %} 
+{# fieldsByUrlLang #}
+{# e - SORT module by url_lang (if there is no match EN sorting will be apply) #}
+{% if !fieldsByUrlLang %}
+{% set module = module["EN"] %}
+{% else %}
+{% set module = module[url_lang|trim] %} 
+{% endif %}
+{% else %}
+
+{# ***************************************** #}
+{# ************* BROWSER_LANG ************* #}
+{# usefull for system page without url_slug #}
+{# **************************************** #}
+
+{# a - set wright language regarding language browser preferences (EN by/if default)#}
+{% set lang = request.headers['accept-language']|split(',')|map('lower') %}
+{% set browser_lang  = countryCodes[lang[0]] || countryCodes[lang[1]|split(';')|first] || 'EN' %}
+{% if browser_lang is containing "_" %}
+{% set tab_b = browser_lang|split('_') %}
+{% set browser_lang = tab_b[0]%}
+{% endif %}
+{# b - creating {{ fieldsByBrowserLang }} -> contains every fields (name + value) from module which match browser_lang #}
+{% set fieldsByBrowserLang = module[browser_lang] %}
+{# fieldsByBrowserLang #}
+{# c - SORT module by browser_lang (if there is no match EN sorting will be apply) #}
+{% if !fieldsByBrowserLang %}
+{% set module = module["EN"] %}
+{% else %}
+{% set module = module[browser_lang] %}
+{% endif %}
+{% endif %}
+{% endif %}
+
+
+<!------------------------->
+<!-- B - CONCRETE HEADER -->
+<!------------------------->
+<div class="global-outer-header d-flex justify-content-space-between pl-4 pr-4">
+  <h1>HEADER</h1>
+
+  {% menu id="{{ module.menu_main }}" %} <br> <br>
+  {% cta guid="{{ module.cta }}" %}
+  
+  {{ module.sub_groupe.text }} 
+
+</div>
+
+
+
+
+
+
+
+

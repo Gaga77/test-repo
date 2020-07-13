@@ -1,0 +1,322 @@
+[ {
+  "id" : "26953ad3-c71c-1a57-c0e9-0fca6d51c28e",
+  "name" : "preview_language_selector",
+  "label" : "Preview Language Selector",
+  "help_text" : "Select a language to modify the corresponding content and preview it.",
+  "required" : false,
+  "locked" : true,
+  "display" : "select",
+  "choices" : [ [ "en", "English" ], [ "fr", "French" ], [ "es", "Spanish" ], [ "de", "German" ], [ "it", "Italian" ] ],
+  "type" : "choice",
+  "default" : "en"
+}, {
+  "id" : "713f9196-02a9-8053-da72-3d1522e00184",
+  "name" : "FR",
+  "label" : "FR",
+  "required" : false,
+  "locked" : true,
+  "visibility" : {
+    "controlling_field" : "26953ad3-c71c-1a57-c0e9-0fca6d51c28e",
+    "controlling_value_regex" : "^fr$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "d7689f5d-d84e-c652-621d-1d2c412085d4",
+    "name" : "menu_main",
+    "label" : "Menu main",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "default" : 29110610542
+  }, {
+    "id" : "9293bd23-3d75-4723-171a-b84f2e1f64c4",
+    "name" : "cta",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "default" : "f3e50269-a9a2-48cd-a95a-c1ea72fa0f46"
+  }, {
+    "id" : "f12981fb-6a30-2bad-a89b-a40994040020",
+    "name" : "sub_groupe",
+    "label" : "Sub groupe (example)",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "eaf0c525-7c6d-6b4e-5733-c0834b1e053e",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Test text FR (sub group)"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : {
+      "text" : "Test text FR (sub group)"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "menu_main" : 29110610542,
+    "cta" : "f3e50269-a9a2-48cd-a95a-c1ea72fa0f46",
+    "sub_groupe" : {
+      "text" : "Test text FR (sub group)"
+    }
+  }
+}, {
+  "id" : "389ee5a3-c37e-ce9c-39da-5ee8fc8cab6f",
+  "name" : "EN",
+  "label" : "EN",
+  "required" : false,
+  "locked" : true,
+  "visibility" : {
+    "controlling_field" : "26953ad3-c71c-1a57-c0e9-0fca6d51c28e",
+    "controlling_value_regex" : "^en$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "bc784094-2c84-9365-4150-a00f99dd9fdb",
+    "name" : "menu_main",
+    "label" : "Menu main",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "default" : 29110610681
+  }, {
+    "id" : "490e2bd8-9eaf-98e8-48c8-8938044d2f71",
+    "name" : "cta",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "default" : "b4900ed7-2613-4800-a30f-5a2d75396bd6"
+  }, {
+    "id" : "64139e58-3a1c-29de-b4a7-0324df796b17",
+    "name" : "sub_groupe",
+    "label" : "Sub groupe (example)",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "47e73934-1ce4-0c3d-d7d9-af757cb2dfb6",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Test text EN (sub group)"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : {
+      "text" : "Test text EN (sub group)"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "menu_main" : 29110610681,
+    "cta" : "b4900ed7-2613-4800-a30f-5a2d75396bd6",
+    "sub_groupe" : {
+      "text" : "Test text EN (sub group)"
+    }
+  }
+}, {
+  "id" : "a6c2d433-61f4-5531-de6f-91fb90ca4ee0",
+  "name" : "DE",
+  "label" : "DE",
+  "required" : false,
+  "locked" : true,
+  "visibility" : {
+    "controlling_field" : "26953ad3-c71c-1a57-c0e9-0fca6d51c28e",
+    "controlling_value_regex" : "^de$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "9ea47c6d-c7e6-1d9c-f624-7d568b8e91ae",
+    "name" : "menu_main",
+    "label" : "Menu main",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "default" : 29110567326
+  }, {
+    "id" : "477e27cb-2f65-6b3a-8275-353d9817fb10",
+    "name" : "cta",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "default" : "58d68768-4317-4783-96ab-f4450669b0e0"
+  }, {
+    "id" : "6e0e4b81-4ccb-daa2-e764-c1de592615db",
+    "name" : "sub_groupe",
+    "label" : "Sub groupe (example)",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "0dfc4988-d791-01d4-9970-622928721a96",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Test text DE (sub group)"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : {
+      "text" : "Test text DE (sub group)"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "menu_main" : 29110567326,
+    "cta" : "58d68768-4317-4783-96ab-f4450669b0e0",
+    "sub_groupe" : {
+      "text" : "Test text DE (sub group)"
+    }
+  }
+}, {
+  "id" : "cea680c2-002d-b8cd-e3df-30f9a0998737",
+  "name" : "ES",
+  "label" : "ES",
+  "required" : false,
+  "locked" : true,
+  "visibility" : {
+    "controlling_field" : "26953ad3-c71c-1a57-c0e9-0fca6d51c28e",
+    "controlling_value_regex" : "^es$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "3d023bfd-ac85-6b01-25b3-1285297bd6fb",
+    "name" : "menu_main",
+    "label" : "Menu main",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "default" : 29111455569
+  }, {
+    "id" : "d7f02f2d-6b68-2fe8-7636-9a7b611777d7",
+    "name" : "cta",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "default" : "e899b730-a4c0-4c0b-8341-f0e0864919c1"
+  }, {
+    "id" : "15f55afc-9ae7-f757-3304-95dca0c32d46",
+    "name" : "sub_groupe",
+    "label" : "Sub groupe (example)",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "c2c413be-6810-3d57-3069-535e92d3f92c",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Test text ES (sub group)"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : {
+      "text" : "Test text ES (sub group)"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "menu_main" : 29111455569,
+    "cta" : "e899b730-a4c0-4c0b-8341-f0e0864919c1",
+    "sub_groupe" : {
+      "text" : "Test text ES (sub group)"
+    }
+  }
+}, {
+  "id" : "fbc6fb09-e7e6-3bb0-7e78-08e14093285c",
+  "name" : "IT",
+  "label" : "IT",
+  "required" : false,
+  "locked" : true,
+  "visibility" : {
+    "controlling_field" : "26953ad3-c71c-1a57-c0e9-0fca6d51c28e",
+    "controlling_value_regex" : "^it$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "0b2d0f02-3c5e-31e8-75af-b51da29bd9fd",
+    "name" : "menu_main",
+    "label" : "Menu main",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "default" : 31418224158
+  }, {
+    "id" : "c2380092-d754-bded-f703-628f64bbaaaa",
+    "name" : "cta",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "default" : "5abece12-0a77-484b-aae6-a050ede82eb9"
+  }, {
+    "id" : "eb2e79bc-af5f-2c32-4e5c-597bb324eea3",
+    "name" : "sub_groupe",
+    "label" : "Sub groupe (example)",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "35f89fda-d7cc-9e62-c0be-41eb46d9d8f9",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Test text IT (sub group)"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : {
+      "text" : "Test text IT (sub group)"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "menu_main" : 31418224158,
+    "cta" : "5abece12-0a77-484b-aae6-a050ede82eb9",
+    "sub_groupe" : {
+      "text" : "Test text IT (sub group)"
+    }
+  }
+} ]

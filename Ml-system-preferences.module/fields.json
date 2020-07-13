@@ -1,0 +1,568 @@
+[ {
+  "id" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+  "name" : "preview_language_selector",
+  "label" : "Preview Language Selector",
+  "help_text" : "Select a language to modify the corresponding content and preview it.",
+  "required" : true,
+  "locked" : false,
+  "display" : "select",
+  "placeholder" : "Search",
+  "choices" : [ [ "en", "English" ], [ "fr", "French" ], [ "es", "Spanish" ], [ "de", "German" ], [ "it", "Italian" ] ],
+  "type" : "choice",
+  "default" : "en"
+}, {
+  "id" : "782e8722-964b-e167-5852-601137211ab2",
+  "name" : "EN",
+  "label" : "English",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "en",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "20400e5d-02ad-2c6e-ece8-94a73cc82fb9",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Communication Preferences"
+  }, {
+    "id" : "280f08c7-fd0a-4983-dce8-5ae43241cda6",
+    "name" : "subheader_text",
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "If this is not your email address, please ignore this page since the email associated with this page was most likely forwarded to you."
+  }, {
+    "id" : "2af3984f-d5e9-d7eb-08d3-c04d65677354",
+    "name" : "unsubscribe_single_text",
+    "label" : "Preference selection help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Uncheck the types of emails you do not want to receive:"
+  }, {
+    "id" : "eb8fb410-5139-87e1-2736-9a253a595090",
+    "name" : "unsubscribe_all_text",
+    "label" : "Unsubscribe all help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Or check here to never receive any emails:"
+  }, {
+    "id" : "86d977d8-0a5c-1794-4f20-19758c04070c",
+    "name" : "unsubscribe_all_unsubbed_text",
+    "label" : "Unsubscribe all help text for a currently unsubbed user",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You are presently unsubscribed from all of our emails. Would you like to receive our emails again?"
+  }, {
+    "id" : "294c4f76-b890-2cc9-8111-d4c3b904ad20",
+    "name" : "unsubscribe_all_option",
+    "label" : "Unsubscribe all label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Unsubscribe me from all mailing lists."
+  }, {
+    "id" : "1dd305a0-6182-1299-6768-03b9c8080901",
+    "name" : "button_text",
+    "label" : "Update preferences button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Update email preferences"
+  }, {
+    "id" : "330c3c65-ff3a-c1a1-9368-05aba6157546",
+    "name" : "resubscribe_button_text",
+    "label" : "Resubscribe button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Yes, resubscribe me!"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Communication Preferences",
+    "subheader_text" : "If this is not your email address, please ignore this page since the email associated with this page was most likely forwarded to you.",
+    "unsubscribe_single_text" : "Uncheck the types of emails you do not want to receive:",
+    "unsubscribe_all_text" : "Or check here to never receive any emails:",
+    "unsubscribe_all_unsubbed_text" : "You are presently unsubscribed from all of our emails. Would you like to receive our emails again?",
+    "unsubscribe_all_option" : "Unsubscribe me from all mailing lists.",
+    "button_text" : "Update email preferences",
+    "resubscribe_button_text" : "Yes, resubscribe me!"
+  }
+}, {
+  "id" : "72dbdbed-a7f6-a7ad-4072-78b74f0d7a6e",
+  "name" : "FR",
+  "label" : "French",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "fr",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "0c34040c-4851-ccc9-78b5-0aacdf4fcf1b",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Préférences de communication"
+  }, {
+    "id" : "1631cd14-e06f-ae12-40d5-510c9fe697f9",
+    "name" : "subheader_text",
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Si ce n’est pas votre adresse e-mail, veuillez ignorer cette page puisque l’e-mail associé vous a probablement été transféré.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Si ce n’est pas votre adresse e-mail, veuillez ignorer cette page puisque l’e-mail associé vous a probablement été transféré.</span>"
+  }, {
+    "id" : "95ac268d-c6b4-9df1-4e41-20d2c35c5d0d",
+    "name" : "unsubscribe_single_text",
+    "label" : "Preference selection help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Décochez les types d’e-mails que vous ne souhaitez pas recevoir :"
+  }, {
+    "id" : "4be90a47-2565-035d-ba29-69625c9101e1",
+    "name" : "unsubscribe_all_text",
+    "label" : "Unsubscribe all help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ou cochez ici pour ne jamais recevoir d'e-mails:"
+  }, {
+    "id" : "bdd3dff8-075b-2b01-e12f-7551a96c483f",
+    "name" : "unsubscribe_all_unsubbed_text",
+    "label" : "Unsubscribe all help text for a currently unsubbed user",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Vous êtes actuellement désabonné de tous nos e-mails. Souhaitez-vous recevoir à nouveau nos e-mails ?"
+  }, {
+    "id" : "fc038660-7815-e450-815f-dd18eb0d3595",
+    "name" : "unsubscribe_all_option",
+    "label" : "Unsubscribe all label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Me désabonner de toutes les listes de diffusion."
+  }, {
+    "id" : "c154253c-b11e-bd0f-ef9b-550690fc6781",
+    "name" : "button_text",
+    "label" : "Update preferences button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Mettre à jour les préférences d’e-mail"
+  }, {
+    "id" : "db7a2ccc-2f24-1e77-697b-e9180be17855",
+    "name" : "resubscribe_button_text",
+    "label" : "Resubscribe button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Oui, je veux me réabonner !"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Préférences de communication",
+    "subheader_text" : "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Si ce n’est pas votre adresse e-mail, veuillez ignorer cette page puisque l’e-mail associé vous a probablement été transféré.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Si ce n’est pas votre adresse e-mail, veuillez ignorer cette page puisque l’e-mail associé vous a probablement été transféré.</span>",
+    "unsubscribe_single_text" : "Décochez les types d’e-mails que vous ne souhaitez pas recevoir :",
+    "unsubscribe_all_text" : "Ou cochez ici pour ne jamais recevoir d'e-mails:",
+    "unsubscribe_all_unsubbed_text" : "Vous êtes actuellement désabonné de tous nos e-mails. Souhaitez-vous recevoir à nouveau nos e-mails ?",
+    "unsubscribe_all_option" : "Me désabonner de toutes les listes de diffusion.",
+    "button_text" : "Mettre à jour les préférences d’e-mail",
+    "resubscribe_button_text" : "Oui, je veux me réabonner !"
+  }
+}, {
+  "id" : "324e630c-4ae6-2447-b85a-45430535995b",
+  "name" : "ES",
+  "label" : "Spanish (Spain)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^es$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "572c1ff4-16f4-5299-edf7-1dbc1698da48",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Preferencias de comunicación"
+  }, {
+    "id" : "2048e9d3-02f2-9195-f969-9588dc89e003",
+    "name" : "subheader_text",
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Si esta no es su dirección de correo, ignore esta página dado que el correo asociado con esta página probablemente se le reenvió a usted.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Si esta no es su dirección de correo, ignore esta página dado que el correo asociado con esta página probablemente se le reenvió a usted.</span>"
+  }, {
+    "id" : "c31262fe-0942-e2cd-3f5e-9942c04693b0",
+    "name" : "unsubscribe_single_text",
+    "label" : "Preference selection help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Desmarque los tipos de correo electrónico que no desea recibir:"
+  }, {
+    "id" : "3fd7b58e-22ea-7b37-4014-8832bd2cb4e5",
+    "name" : "unsubscribe_all_text",
+    "label" : "Unsubscribe all help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "O marque aquí para nunca recibir ningún correo electrónico:"
+  }, {
+    "id" : "fd18c7b8-722c-4d32-64d5-74fe0462d856",
+    "name" : "unsubscribe_all_unsubbed_text",
+    "label" : "Unsubscribe all help text for a currently unsubbed user",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Se ha dado de baja de todos nuestros correos electrónicos. ¿Le gustaría volver a recibirlos?"
+  }, {
+    "id" : "deec1dad-5918-02ae-7300-fd15680200d3",
+    "name" : "unsubscribe_all_option",
+    "label" : "Unsubscribe all label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Darme de baja de todos los listados de correo electrónico."
+  }, {
+    "id" : "2374a9d6-8acf-db1b-d269-3234a78bbd9b",
+    "name" : "button_text",
+    "label" : "Update preferences button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Actualizar preferencia de correo electrónico"
+  }, {
+    "id" : "a36b9f83-ac04-5d50-4746-16eba9bb636c",
+    "name" : "resubscribe_button_text",
+    "label" : "Resubscribe button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Sí. ¡Vuelvan a darme de alta!"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Preferencias de comunicación",
+    "subheader_text" : "<span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Si esta no es su dirección de correo, ignore esta página dado que el correo asociado con esta página probablemente se le reenvió a usted.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Si esta no es su dirección de correo, ignore esta página dado que el correo asociado con esta página probablemente se le reenvió a usted.</span>",
+    "unsubscribe_single_text" : "Desmarque los tipos de correo electrónico que no desea recibir:",
+    "unsubscribe_all_text" : "O marque aquí para nunca recibir ningún correo electrónico:",
+    "unsubscribe_all_unsubbed_text" : "Se ha dado de baja de todos nuestros correos electrónicos. ¿Le gustaría volver a recibirlos?",
+    "unsubscribe_all_option" : "Darme de baja de todos los listados de correo electrónico.",
+    "button_text" : "Actualizar preferencia de correo electrónico",
+    "resubscribe_button_text" : "Sí. ¡Vuelvan a darme de alta!"
+  }
+}, {
+  "id" : "3d7c2db8-5106-fe60-5bf7-2031e40233c1",
+  "name" : "IT",
+  "label" : "Italian",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^it$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "3bf36e7c-caaa-88f5-e50d-adcc4bf5e2d0",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Preferenze di comunicazione"
+  }, {
+    "id" : "ef1e7005-c5d6-549d-f017-1d7bc48b2b4c",
+    "name" : "subheader_text",
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Se questo non è il tuo indirizzo e-mail, ignora questa pagina poiché l'e-mail associata a questa pagina ti è stata probabilmente inoltrata."
+  }, {
+    "id" : "7a77dfc0-3bdd-3d8e-fb44-8eed9c0a55a2",
+    "name" : "unsubscribe_single_text",
+    "label" : "Preference selection help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Deseleziona i tipi di email che non desideri ricevere:"
+  }, {
+    "id" : "768efe1c-a9ad-bc81-8d8b-2e14925d271b",
+    "name" : "unsubscribe_all_text",
+    "label" : "Unsubscribe all help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Oppure controlla qui per non ricevere mai email:"
+  }, {
+    "id" : "ceb3f8d1-3ca7-a19a-156f-19b0d0eeed3a",
+    "name" : "unsubscribe_all_unsubbed_text",
+    "label" : "Unsubscribe all help text for a currently unsubbed user",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Hai annullato l'iscrizione a tutte le nostre e-mail. Vuoi riceverli di nuovo?"
+  }, {
+    "id" : "adf7d60a-f769-7e41-0b56-fd7900245f8e",
+    "name" : "unsubscribe_all_option",
+    "label" : "Unsubscribe all label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Annulla l'iscrizione a tutti gli elenchi di posta elettronica."
+  }, {
+    "id" : "bd335dff-3df2-a108-2529-a8567e0e26ab",
+    "name" : "button_text",
+    "label" : "Update preferences button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Aggiorna preferenza email"
+  }, {
+    "id" : "79f494b1-2847-4f27-92bb-d18d720efddb",
+    "name" : "resubscribe_button_text",
+    "label" : "Resubscribe button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Sì. Registrami di nuovo!"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Preferenze di comunicazione",
+    "subheader_text" : "Se questo non è il tuo indirizzo e-mail, ignora questa pagina poiché l'e-mail associata a questa pagina ti è stata probabilmente inoltrata.",
+    "unsubscribe_single_text" : "Deseleziona i tipi di email che non desideri ricevere:",
+    "unsubscribe_all_text" : "Oppure controlla qui per non ricevere mai email:",
+    "unsubscribe_all_unsubbed_text" : "Hai annullato l'iscrizione a tutte le nostre e-mail. Vuoi riceverli di nuovo?",
+    "unsubscribe_all_option" : "Annulla l'iscrizione a tutti gli elenchi di posta elettronica.",
+    "button_text" : "Aggiorna preferenza email",
+    "resubscribe_button_text" : "Sì. Registrami di nuovo!"
+  }
+}, {
+  "id" : "5d8e49b8-665a-73d6-ec46-91172ef35ce8",
+  "name" : "DE",
+  "label" : "German",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^de$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "64da3ab4-8e12-8b77-6231-a96480f87ae0",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationspräferenzen"
+  }, {
+    "id" : "094ee2a0-6db9-3488-f250-70094f79bd92",
+    "name" : "subheader_text",
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span>Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite bitte, da die mit dieser Seite verknüpfte E-Mail höchstwahrscheinlich an Sie weitergeleitet wurde.</span>"
+  }, {
+    "id" : "1c86b009-d4e3-3dd6-2e75-bde58bf0ec29",
+    "name" : "unsubscribe_single_text",
+    "label" : "Preference selection help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Deaktivieren Sie die E-Mail-Typen, die Sie nicht erhalten möchten:"
+  }, {
+    "id" : "63983d9a-227e-e787-1b1f-0b31277ae04a",
+    "name" : "unsubscribe_all_text",
+    "label" : "Unsubscribe all help text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Oder überprüfen Sie hier, um niemals eine E-Mail zu erhalten:"
+  }, {
+    "id" : "a52cfddd-df65-89bd-fd21-a0e776feae65",
+    "name" : "unsubscribe_all_unsubbed_text",
+    "label" : "Unsubscribe all help text for a currently unsubbed user",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Sie haben sich von allen unseren E-Mails abgemeldet. Möchten Sie sie wieder erhalten?"
+  }, {
+    "id" : "b7a6b59c-4355-8ed7-37bb-db7da691b1ee",
+    "name" : "unsubscribe_all_option",
+    "label" : "Unsubscribe all label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Melden Sie sich von allen E-Mail-Angeboten ab."
+  }, {
+    "id" : "dfeb8cd1-dfc1-a3b7-2307-eafe51302e90",
+    "name" : "button_text",
+    "label" : "Update preferences button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Aktualisieren Sie die E-Mail-Einstellungen"
+  }, {
+    "id" : "a46fe4fd-4360-3f06-9090-bd4c0c2a93ae",
+    "name" : "resubscribe_button_text",
+    "label" : "Resubscribe button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ja. Melden Sie mich erneut an!"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationspräferenzen",
+    "subheader_text" : "<span>Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite bitte, da die mit dieser Seite verknüpfte E-Mail höchstwahrscheinlich an Sie weitergeleitet wurde.</span>",
+    "unsubscribe_single_text" : "Deaktivieren Sie die E-Mail-Typen, die Sie nicht erhalten möchten:",
+    "unsubscribe_all_text" : "Oder überprüfen Sie hier, um niemals eine E-Mail zu erhalten:",
+    "unsubscribe_all_unsubbed_text" : "Sie haben sich von allen unseren E-Mails abgemeldet. Möchten Sie sie wieder erhalten?",
+    "unsubscribe_all_option" : "Melden Sie sich von allen E-Mail-Angeboten ab.",
+    "button_text" : "Aktualisieren Sie die E-Mail-Einstellungen",
+    "resubscribe_button_text" : "Ja. Melden Sie mich erneut an!"
+  }
+} ]

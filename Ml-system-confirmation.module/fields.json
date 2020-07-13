@@ -1,0 +1,327 @@
+[ {
+  "id" : "53dec16d-7c63-db14-eeda-dc249786b7d8",
+  "name" : "preview_language_selector",
+  "label" : "Preview Language Selector",
+  "help_text" : "Select a language to modify the corresponding content and preview it.",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "en", "English" ], [ "fr", "French" ], [ "es", "Spanish" ], [ "de", "German" ], [ "it", "Italian" ] ],
+  "type" : "choice",
+  "default" : "en"
+}, {
+  "id" : "782e8722-964b-e167-5852-601137211ab2",
+  "name" : "EN",
+  "label" : "English",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "53dec16d-7c63-db14-eeda-dc249786b7d8",
+    "controlling_value_regex" : "^en$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "20400e5d-02ad-2c6e-ece8-94a73cc82fb9",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Communication Preferences"
+  }, {
+    "id" : "9fd78000-a6a5-806e-866c-d2d8dd04d95b",
+    "name" : "unsubscribe_all_success",
+    "label" : "Unsubscribe all success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "459d8a9a-bc88-9bbd-a8a2-196ac42a1093",
+    "name" : "subscription_update_success",
+    "label" : "Subscription update success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  }, {
+    "id" : "6452a9c5-e67d-7258-e79f-6032e7d2f33b",
+    "name" : "subheader_text",
+    "label" : "Subheader text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>If this is not your email address, please ignore this page since the email associated with this page was most likely forwarded to you.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Communication Preferences",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences.",
+    "subheader_text" : "<p>If this is not your email address, please ignore this page since the email associated with this page was most likely forwarded to you.</p>"
+  }
+}, {
+  "id" : "243d44b9-9235-7589-845d-8eb02d4e9c8f",
+  "name" : "DE",
+  "label" : "German",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "53dec16d-7c63-db14-eeda-dc249786b7d8",
+    "controlling_value_regex" : "^de$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "c8a4cc5f-c49a-35ff-5b16-e1fb4cc6a117",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationspräferenzen"
+  }, {
+    "id" : "2bdd3007-a270-e294-c0f4-44e25a95e7b9",
+    "name" : "unsubscribe_all_success",
+    "label" : "Unsubscribe all success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Sie haben sich erfolgreich von allen E-Mail-Mitteilungen abgemeldet."
+  }, {
+    "id" : "f12a7e8f-f737-8569-2212-a662bd665fe0",
+    "name" : "subscription_update_success",
+    "label" : "Subscription update success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Sie haben Ihre E-Mail-Einstellungen erfolgreich aktualisiert."
+  }, {
+    "id" : "bf9edaab-c06c-5951-7474-647851689af1",
+    "name" : "subheader_text",
+    "label" : "Subheader text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span>Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite bitte, da die mit dieser Seite verknüpfte E-Mail höchstwahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationspräferenzen",
+    "unsubscribe_all_success" : "Sie haben sich erfolgreich von allen E-Mail-Mitteilungen abgemeldet.",
+    "subscription_update_success" : "Sie haben Ihre E-Mail-Einstellungen erfolgreich aktualisiert.",
+    "subheader_text" : "<p><span>Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite bitte, da die mit dieser Seite verknüpfte E-Mail höchstwahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }
+}, {
+  "id" : "72dbdbed-a7f6-a7ad-4072-78b74f0d7a6e",
+  "name" : "FR",
+  "label" : "French",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "53dec16d-7c63-db14-eeda-dc249786b7d8",
+    "controlling_value_regex" : "^fr$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "0c34040c-4851-ccc9-78b5-0aacdf4fcf1b",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Préférences de communication"
+  }, {
+    "id" : "c3a99214-ba0d-88a9-1fa2-ba8f06bc0534",
+    "name" : "unsubscribe_all_success",
+    "label" : "Unsubscribe all success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Vous avez réussi à vous désinscrire de toutes les communications par e-mail."
+  }, {
+    "id" : "56718d17-0ca3-aef1-0299-3971ae7737eb",
+    "name" : "subscription_update_success",
+    "label" : "Subscription update success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Vous avez mis à jour avec succès vos préférences de communication."
+  }, {
+    "id" : "748d91ea-f8e6-4dae-d98e-4507f6b40a6c",
+    "name" : "subheader_text",
+    "label" : "Subheader text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span>Si ce n'est pas votre adresse e-mail, veuillez ignorer cette page car l'e-mail associé à cette page vous a probablement été transmis.</span></p>"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Préférences de communication",
+    "unsubscribe_all_success" : "Vous avez réussi à vous désinscrire de toutes les communications par e-mail.",
+    "subscription_update_success" : "Vous avez mis à jour avec succès vos préférences de communication.",
+    "subheader_text" : "<p><span>Si ce n'est pas votre adresse e-mail, veuillez ignorer cette page car l'e-mail associé à cette page vous a probablement été transmis.</span></p>"
+  }
+}, {
+  "id" : "324e630c-4ae6-2447-b85a-45430535995b",
+  "name" : "ES",
+  "label" : "Spanish (Spain)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "53dec16d-7c63-db14-eeda-dc249786b7d8",
+    "controlling_value_regex" : "^es$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "572c1ff4-16f4-5299-edf7-1dbc1698da48",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Preferencias de comunicación"
+  }, {
+    "id" : "c31262fe-0942-e2cd-3f5e-9942c04693b0",
+    "name" : "unsubscribe_all_success",
+    "label" : "Unsubscribe all success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Desmarque los tipos de correo electrónico que no desea recibir:"
+  }, {
+    "id" : "286bd823-6e9b-aba7-aad7-d007607ce438",
+    "name" : "subscription_update_success",
+    "label" : "Subscription update success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Has actualizado correctamente tus preferencias de correo electrónico."
+  }, {
+    "id" : "5d378695-1f9b-21e9-3127-06809454902f",
+    "name" : "subheader_text",
+    "label" : "Subheader text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span>Si esta no es su dirección de correo electrónico, ignore esta página, ya que el correo electrónico asociado con esta página probablemente le fue enviado.</span></p>"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Preferencias de comunicación",
+    "unsubscribe_all_success" : "Desmarque los tipos de correo electrónico que no desea recibir:",
+    "subscription_update_success" : "Has actualizado correctamente tus preferencias de correo electrónico.",
+    "subheader_text" : "<p><span>Si esta no es su dirección de correo electrónico, ignore esta página, ya que el correo electrónico asociado con esta página probablemente le fue enviado.</span></p>"
+  }
+}, {
+  "id" : "01df8c4c-30a6-6c74-5799-5dfb7f798417",
+  "name" : "IT",
+  "label" : "Italian",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "53dec16d-7c63-db14-eeda-dc249786b7d8",
+    "controlling_value_regex" : "^it$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "49992630-88bc-ca03-174c-742b0bb6f8e9",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Preferenze di comunicazione"
+  }, {
+    "id" : "5fcbb705-720b-a6a2-4ac8-49e003776b03",
+    "name" : "unsubscribe_all_success",
+    "label" : "Unsubscribe all success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Deseleziona i tipi di email che non desideri ricevere:"
+  }, {
+    "id" : "e59e3fc1-1aaf-a59e-20fb-c1ee66f4d153",
+    "name" : "subscription_update_success",
+    "label" : "Subscription update success",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Hai aggiornato con successo le tue preferenze email."
+  }, {
+    "id" : "b76619b0-ab99-9364-b9b1-e613c6c1921a",
+    "name" : "subheader_text",
+    "label" : "Subheader text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Se questo non è il tuo indirizzo e-mail, ignora questa pagina, poiché probabilmente l'e-mail associata a questa pagina ti è stata inviata.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "header" : "Preferenze di comunicazione",
+    "unsubscribe_all_success" : "Deseleziona i tipi di email che non desideri ricevere:",
+    "subscription_update_success" : "Hai aggiornato con successo le tue preferenze email.",
+    "subheader_text" : "<p>Se questo non è il tuo indirizzo e-mail, ignora questa pagina, poiché probabilmente l'e-mail associata a questa pagina ti è stata inviata.</p>"
+  }
+} ]

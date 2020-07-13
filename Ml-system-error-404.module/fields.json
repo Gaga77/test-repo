@@ -1,0 +1,342 @@
+[ {
+  "id" : "b82bb2b6-d12c-4d8d-f709-01129c635acf",
+  "name" : "preview_language_selector",
+  "label" : "Preview Language Selector",
+  "help_text" : "Select a language to modify the corresponding content and preview it.",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "en", "English" ], [ "fr", "French" ], [ "es", "Spanish" ], [ "de", "German" ], [ "it", "Italian" ] ],
+  "type" : "choice",
+  "default" : "en"
+}, {
+  "id" : "a62dde85-149c-ce6b-d959-6869d3973067",
+  "name" : "EN",
+  "label" : "EN",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "b82bb2b6-d12c-4d8d-f709-01129c635acf",
+    "controlling_value_regex" : "^en$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "5db6592e-3845-211f-f221-6b458836269b",
+    "name" : "error",
+    "label" : "Error ",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "404"
+  }, {
+    "id" : "3f8401fc-8832-4d3e-53de-c32ce710e1f4",
+    "name" : "error_sentence",
+    "label" : "Error sentence",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Page not found"
+  }, {
+    "id" : "02d0aee6-8754-e63b-c07d-2c4befd15493",
+    "name" : "button_text",
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Back to homepage"
+  }, {
+    "id" : "2c4f9ac5-5096-6662-25e2-29e983e5bda0",
+    "name" : "button_link",
+    "label" : "Button link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "error" : "404",
+    "error_sentence" : "Page not found",
+    "button_text" : "Back to homepage",
+    "button_link" : ""
+  }
+}, {
+  "id" : "f382608c-0262-86b8-836d-11f7eb5ecc2f",
+  "name" : "FR",
+  "label" : "FR",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "b82bb2b6-d12c-4d8d-f709-01129c635acf",
+    "controlling_value_regex" : "^fr$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "4f2a0814-dc8f-15cf-300f-8f15438ffbb2",
+    "name" : "error",
+    "label" : "Error ",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "404"
+  }, {
+    "id" : "ff195870-4df0-bbea-2ef5-edb04523ce22",
+    "name" : "error_sentence",
+    "label" : "Error sentence",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Page non trouvée"
+  }, {
+    "id" : "b66e5aa0-6ffd-1b90-606a-537c32bd09e6",
+    "name" : "button_text",
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Retour à l'accueil"
+  }, {
+    "id" : "7f537170-dfbd-c9b9-451c-fa23d7eb20eb",
+    "name" : "button_link",
+    "label" : "Button link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "error" : "404",
+    "error_sentence" : "Page non trouvée",
+    "button_text" : "Retour à l'accueil",
+    "button_link" : ""
+  }
+}, {
+  "id" : "067540ca-e42b-845e-eea6-0b223bd8c0e8",
+  "name" : "DE",
+  "label" : "DE",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "b82bb2b6-d12c-4d8d-f709-01129c635acf",
+    "controlling_value_regex" : "^de$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "633accc8-6393-b457-04ec-54217a429b6a",
+    "name" : "error",
+    "label" : "Error ",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "404"
+  }, {
+    "id" : "a79b21c6-f0d8-7edf-15f5-5a86ee774326",
+    "name" : "error_sentence",
+    "label" : "Error sentence",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Seite nicht gefunden"
+  }, {
+    "id" : "bcc2b576-5ff7-1091-2d3e-906136ebafaf",
+    "name" : "button_text",
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Zurück zur Startseite"
+  }, {
+    "id" : "a5ba783f-71ea-8678-1825-f3ffd26bbc25",
+    "name" : "button_link",
+    "label" : "Button link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "error" : "404",
+    "error_sentence" : "Seite nicht gefunden",
+    "button_text" : "Zurück zur Startseite",
+    "button_link" : ""
+  }
+}, {
+  "id" : "9f9ab850-13eb-3232-5b4f-a4d82235fa68",
+  "name" : "ES",
+  "label" : "ES",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "b82bb2b6-d12c-4d8d-f709-01129c635acf",
+    "controlling_value_regex" : "^es$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "7c00fad2-a882-7928-5f73-7105a13f8421",
+    "name" : "error",
+    "label" : "Error ",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "404"
+  }, {
+    "id" : "4196b7d0-81e9-81fd-1383-2a10da168faa",
+    "name" : "error_sentence",
+    "label" : "Error sentence",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Página no encontrada"
+  }, {
+    "id" : "58c9ad40-0867-ba7b-3e84-c3c76e050e8e",
+    "name" : "button_text",
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Volver a la página de inicio"
+  }, {
+    "id" : "d1ef2368-3b61-cec7-dd29-58c27da7e500",
+    "name" : "button_link",
+    "label" : "Button link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "error" : "404",
+    "error_sentence" : "Página no encontrada",
+    "button_text" : "Volver a la página de inicio",
+    "button_link" : ""
+  }
+}, {
+  "id" : "a9b4db97-034f-bd61-6010-5a35fea6a8a7",
+  "name" : "IT",
+  "label" : "IT",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "b82bb2b6-d12c-4d8d-f709-01129c635acf",
+    "controlling_value_regex" : "^it$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "b4a0c6ac-8072-932f-2ae3-a7acc85757ec",
+    "name" : "error",
+    "label" : "Error ",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "404"
+  }, {
+    "id" : "e49fa25b-2034-1cb9-89a4-71fa43f2fb53",
+    "name" : "error_sentence",
+    "label" : "Error sentence",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Pagina non trovata"
+  }, {
+    "id" : "4f6a3aed-3440-fe28-0bbc-5f515bb498d1",
+    "name" : "button_text",
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Tornare a casa"
+  }, {
+    "id" : "11b3fb3e-572d-c41a-2481-a3828bd10cc7",
+    "name" : "button_link",
+    "label" : "Button link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "error" : "404",
+    "error_sentence" : "Pagina non trovata",
+    "button_text" : "Tornare a casa",
+    "button_link" : ""
+  }
+} ]

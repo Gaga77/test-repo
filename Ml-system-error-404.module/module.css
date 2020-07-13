@@ -1,0 +1,9 @@
+.error-outer-container{
+  margin:0 auto;
+}
+.error-outer-container a{
+  margin-top:3rem;
+  border:2px solid #a59a9a;
+  border-radius:0.8rem;
+  padding:0.8rem;
+}
